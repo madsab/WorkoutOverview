@@ -1,17 +1,15 @@
 import React from "react";
-import { Link, Route, Routes } from "react-router-dom";
-import HomePage from "src/pages/HomePage";
+import { MdAnalytics } from "react-icons/md";
+import { LuDumbbell } from "react-icons/lu";
+import { AiFillSetting } from "react-icons/ai"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  <Routes>
-    <Route path="/homepage" element={<HomePage />}>
-      HomePage
-    </Route>
-  </Routes>;
   return (
-    <div>
-      <Link to={"/"}>Homepage</Link>
-      <Link to={"/statistics"}>Statistics</Link>
+    <div className="flex bottom-5 space-x-10 fixed w-full place-content-around ">
+      <Link className="link" to={"/"}><MdAnalytics /></Link>
+      <Link className="link" to={"/statistics"}><LuDumbbell /></Link>
+      <Link className="link" to={"/statistics"}><AiFillSetting /></Link>
     </div>
   );
 };
