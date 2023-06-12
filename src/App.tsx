@@ -2,16 +2,16 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
-import Statistics from "./pages/Statstics";
+import Options from "./pages/Options";
 
 function App() {
   return (
-    <div>
-      <Navbar />
+    <div className="flex flex-col h-screen">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/statistics" element={<Statistics />} />
+        <Route path="/statistics" element={<Options />} />
       </Routes>
+      <Navbar />
     </div>
   );
 }
